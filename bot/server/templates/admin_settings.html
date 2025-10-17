@@ -1,0 +1,148 @@
+{% extends "admin_base.html" %}
+
+{% block title %}Settings - Admin{% endblock %}
+{% block mobile_title %}Settings{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto">
+    <h1 class="hidden lg:block text-3xl font-bold text-gray-800 mb-8">Application Settings</h1>
+    
+    <form method="POST" action="/admin/settings/update" class="space-y-6">
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Terms of Service</h2>
+            <p class="text-sm text-gray-600 mb-4">This content will be displayed on the Terms of Service page</p>
+            <textarea name="terms_of_service" rows="10" 
+                      class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition duration-200 shadow-sm"
+                      placeholder="Enter Terms of Service content...">{{ settings.terms_of_service or '' }}</textarea>
+        </div>
+        
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Privacy Policy</h2>
+            <p class="text-sm text-gray-600 mb-4">This content will be displayed on the Privacy Policy page</p>
+            <textarea name="privacy_policy" rows="10" 
+                      class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition duration-200 shadow-sm"
+                      placeholder="Enter Privacy Policy content...">{{ settings.privacy_policy or '' }}</textarea>
+        </div>
+        
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Publisher Earnings Settings</h2>
+            <p class="text-sm text-gray-600 mb-4">Set the earning rate per impression for publishers</p>
+            <div class="flex items-center gap-4">
+                <label class="text-sm font-semibold text-gray-700 min-w-fit">Per Impression Rate (USD):</label>
+                <div class="relative flex-1 max-w-xs">
+                    <span class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 font-semibold">$</span>
+                    <input type="number" name="impression_rate" step="0.0001" min="0" 
+                           value="{{ settings.impression_rate or 0 }}"
+                           class="w-full pl-8 pr-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition duration-200 shadow-sm"
+                           placeholder="0.0000">
+                </div>
+            </div>
+            <p class="text-xs text-gray-500 mt-3">Example: $0.001 means publishers earn $0.001 for each impression</p>
+        </div>
+        
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Withdrawal Settings</h2>
+            <p class="text-sm text-gray-600 mb-4">Set minimum withdrawal amount</p>
+            <div class="flex items-center gap-4">
+                <label class="text-sm font-semibold text-gray-700 min-w-fit">Minimum Withdrawal Amount (USD):</label>
+                <div class="relative flex-1 max-w-xs">
+                    <span class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 font-semibold">$</span>
+                    <input type="number" name="minimum_withdrawal" step="0.01" min="0" 
+                           value="{{ settings.minimum_withdrawal or 10.0 }}"
+                           class="w-full pl-8 pr-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition duration-200 shadow-sm"
+                           placeholder="10.00">
+                </div>
+            </div>
+            <p class="text-xs text-gray-500 mt-3">Publishers must have at least this amount in their balance to request a withdrawal</p>
+        </div>
+        
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Ads API Settings</h2>
+            <p class="text-sm text-gray-600 mb-6">Configure ads API token and callback settings</p>
+            
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Ads API Token</label>
+                    <div class="relative">
+                        <input type="password" name="ads_api_token" id="ads_api_token"
+                               value="{{ settings.ads_api_token or '' }}"
+                               class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition duration-200 shadow-sm pr-12"
+                               placeholder="Enter your ads API token">
+                        <button type="button" onclick="toggleTokenVisibility()" 
+                                class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 focus:outline-none">
+                            <svg id="show_icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                            </svg>
+                            <svg id="hide_icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-2">This token is used to authenticate ad network API requests</p>
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Callback Mode</label>
+                    <select name="callback_mode" 
+                            class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition duration-200 shadow-sm">
+                        <option value="POST" {% if settings.callback_mode == 'POST' or not settings.callback_mode %}selected{% endif %}>POST (JSON)</option>
+                        <option value="GET" {% if settings.callback_mode == 'GET' %}selected{% endif %}>GET (URL Parameters)</option>
+                    </select>
+                    <p class="text-xs text-gray-500 mt-2">Select how postback URLs receive link data</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Android App Settings</h2>
+            <p class="text-sm text-gray-600 mb-6">Configure the Android app for video playback via deep links</p>
+            
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Package Name</label>
+                    <input type="text" name="android_package_name" 
+                           value="{{ settings.android_package_name or '' }}"
+                           class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition duration-200 shadow-sm"
+                           placeholder="com.example.videoapp">
+                    <p class="text-xs text-gray-500 mt-2">Your Android app's package name (e.g., com.yourcompany.videoapp)</p>
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Deep Link Scheme</label>
+                    <input type="text" name="android_deep_link_scheme" 
+                           value="{{ settings.android_deep_link_scheme or '' }}"
+                           class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition duration-200 shadow-sm"
+                           placeholder="videoapp">
+                    <p class="text-xs text-gray-500 mt-2">Your app's deep link scheme (e.g., videoapp, myapp)</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flex justify-end">
+            <button type="submit" 
+                    class="px-8 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-bold rounded-xl transition duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                Save Settings
+            </button>
+        </div>
+    </form>
+</div>
+
+<script>
+function toggleTokenVisibility() {
+    const tokenInput = document.getElementById('ads_api_token');
+    const showIcon = document.getElementById('show_icon');
+    const hideIcon = document.getElementById('hide_icon');
+    
+    if (tokenInput.type === 'password') {
+        tokenInput.type = 'text';
+        showIcon.classList.add('hidden');
+        hideIcon.classList.remove('hidden');
+    } else {
+        tokenInput.type = 'password';
+        showIcon.classList.remove('hidden');
+        hideIcon.classList.add('hidden');
+    }
+}
+</script>
+{% endblock %}

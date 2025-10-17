@@ -1,0 +1,16 @@
+[Unit]
+Description=Telegram File Sharing Bot
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+User=YOUR_USER
+WorkingDirectory=/path/to/bot
+Environment="PATH=/path/to/bot/venv/bin"
+EnvironmentFile=/path/to/bot/.env
+ExecStart=/path/to/bot/venv/bin/python -m bot
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,154 @@
+{% extends "publisher_base.html" %}
+
+{% block title %}Video Upload{% endblock %}
+
+{% block mobile_title %}Video Upload{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto">
+    <h1 class="hidden lg:block text-3xl font-bold text-gray-800 mb-8">Upload Video</h1>
+    
+    <div class="bg-white rounded-2xl shadow-lg p-6">
+        <h2 class="text-xl font-bold text-gray-800 mb-6">Upload Video</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <div id="uploadArea" class="border-2 border-dashed border-gray-300 rounded-xl p-8 sm:p-12 text-center cursor-pointer transition duration-200 hover:border-cyan-500 hover:bg-cyan-50">
+                <svg class="mx-auto h-12 w-12 text-gray-400 mb-4" stroke="currentColor" fill="none" viewBox="0 0 48 48">
+                    <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p class="text-gray-700 font-semibold mb-2">Click to select video or drag and drop here</p>
+                <p class="text-gray-500 text-sm">Maximum file size: 2 GB</p>
+                <input type="file" id="videoFile" name="video" accept="video/*" class="hidden">
+            </div>
+            <button type="submit" id="uploadBtn"
+                    class="w-full mt-6 bg-cyan-500 hover:bg-cyan-600 disabled:bg-gray-400 text-white font-bold py-3 px-6 rounded-xl transition duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 disabled:transform-none disabled:cursor-not-allowed">
+                Upload Video
+            </button>
+            <div id="progress" class="hidden mt-4 w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+                <div id="progressBar" class="h-full bg-gradient-to-r from-cyan-400 to-cyan-500 transition-all duration-300" style="width: 0%"></div>
+            </div>
+        </form>
+        <div id="message" class="hidden mt-6"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    const uploadArea = document.getElementById('uploadArea');
+    const fileInput = document.getElementById('videoFile');
+    const uploadForm = document.getElementById('uploadForm');
+    const uploadBtn = document.getElementById('uploadBtn');
+    const message = document.getElementById('message');
+    const progress = document.getElementById('progress');
+    const progressBar = document.getElementById('progressBar');
+    
+    uploadArea.addEventListener('click', () => {
+        fileInput.click();
+    });
+    
+    uploadArea.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        uploadArea.classList.add('border-cyan-500', 'bg-cyan-50');
+    });
+    
+    uploadArea.addEventListener('dragleave', () => {
+        uploadArea.classList.remove('border-cyan-500', 'bg-cyan-50');
+    });
+    
+    uploadArea.addEventListener('drop', (e) => {
+        e.preventDefault();
+        uploadArea.classList.remove('border-cyan-500', 'bg-cyan-50');
+        if (e.dataTransfer.files.length) {
+            fileInput.files = e.dataTransfer.files;
+            updateFileName();
+        }
+    });
+    
+    fileInput.addEventListener('change', updateFileName);
+    
+    function updateFileName() {
+        if (fileInput.files.length) {
+            const fileName = fileInput.files[0].name;
+            uploadArea.innerHTML = `
+                <svg class="mx-auto h-12 w-12 text-green-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <p class="text-gray-800 font-semibold mb-2">Selected: ${fileName}</p>
+                <p class="text-gray-500 text-sm">Click to select a different file</p>
+            `;
+        }
+    }
+    
+    uploadForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        if (!fileInput.files.length) {
+            showMessage('Please select a video file', 'error');
+            return;
+        }
+        
+        const formData = new FormData();
+        formData.append('video', fileInput.files[0]);
+        
+        uploadBtn.disabled = true;
+        uploadBtn.textContent = 'Uploading...';
+        progress.classList.remove('hidden');
+        message.classList.add('hidden');
+        progressBar.style.width = '50%';
+        
+        try {
+            const response = await fetch('/publisher/upload-video', {
+                method: 'POST',
+                body: formData
+            });
+            
+            const data = await response.json();
+            progressBar.style.width = '100%';
+            
+            if (response.ok) {
+                showMessage(`
+                    <div class="flex items-start gap-3">
+                        <svg class="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <div>
+                            <p class="font-semibold text-green-800">Video uploaded successfully!</p>
+                            <div class="mt-3 p-3 bg-gray-50 rounded-lg">
+                                <p class="text-sm font-semibold text-gray-700 mb-1">Hash ID:</p>
+                                <code class="text-sm text-blue-600 font-mono break-all">${data.hash_id}</code>
+                            </div>
+                        </div>
+                    </div>
+                `, 'success');
+                uploadForm.reset();
+                uploadArea.innerHTML = `
+                    <svg class="mx-auto h-12 w-12 text-gray-400 mb-4" stroke="currentColor" fill="none" viewBox="0 0 48 48">
+                        <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <p class="text-gray-700 font-semibold mb-2">Click to select video or drag and drop here</p>
+                    <p class="text-gray-500 text-sm">Maximum file size: 2 GB</p>
+                `;
+            } else {
+                showMessage(data.message || 'Upload failed', 'error');
+            }
+        } catch (error) {
+            showMessage('Upload failed. Please try again.', 'error');
+        } finally {
+            uploadBtn.disabled = false;
+            uploadBtn.textContent = 'Upload Video';
+            setTimeout(() => {
+                progress.classList.add('hidden');
+                progressBar.style.width = '0%';
+            }, 1000);
+        }
+    });
+    
+    function showMessage(text, type) {
+        const bgColor = type === 'success' ? 'bg-green-50' : 'bg-red-50';
+        const borderColor = type === 'success' ? 'border-green-500' : 'border-red-500';
+        message.className = `p-4 ${bgColor} border-l-4 ${borderColor} rounded-xl`;
+        message.innerHTML = text;
+        message.classList.remove('hidden');
+    }
+</script>
+{% endblock %}

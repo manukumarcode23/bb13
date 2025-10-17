@@ -1,0 +1,269 @@
+[16/10/2025 14:19:50][bot][INFO] -> initializing...
+[16/10/2025 14:19:51][bot][INFO] -> Telegram client is now started.
+[16/10/2025 14:19:51][bot][INFO] -> Loading bot plugins...
+[16/10/2025 14:19:51][bot][INFO] -> Loaded 5 plugins.
+[16/10/2025 14:19:51][bot][INFO] -> Bot is now ready!
+[16/10/2025 14:19:58][bot.database][INFO] -> Database initialized successfully
+[16/10/2025 14:20:05][bot.database][INFO] -> Database migrations completed successfully
+[16/10/2025 14:20:08][bot.database][INFO] -> Admin account password updated: admin@bot.com
+[16/10/2025 14:20:08][uvicorn][INFO] -> Web server is started!
+[16/10/2025 14:20:08][uvicorn][INFO] -> Server running on 0.0.0.0:5000
+[16/10/2025 14:20:10][uvicorn.access][INFO] -> 172.31.93.66:37202 - "GET / HTTP/1.1" 200
+[16/10/2025 14:20:51][uvicorn.access][INFO] -> 172.31.93.66:37202 - "GET / HTTP/1.1" 200
+[16/10/2025 14:21:49][uvicorn.access][INFO] -> 172.31.93.66:37202 - "GET /lohin HTTP/1.1" 404
+[16/10/2025 14:21:49][uvicorn.access][INFO] -> 172.31.93.66:37202 - "GET /favicon.ico HTTP/1.1" 404
+[16/10/2025 14:21:55][uvicorn.access][INFO] -> 172.31.93.66:37202 - "GET /login HTTP/1.1" 200
+[16/10/2025 14:21:59][uvicorn.access][INFO] -> 172.31.93.66:37202 - "GET /register HTTP/1.1" 200
+[16/10/2025 14:22:21][uvicorn.access][INFO] -> 172.31.93.66:37202 - "POST /register HTTP/1.1" 302
+[16/10/2025 14:22:29][uvicorn.access][INFO] -> 172.31.93.66:37202 - "GET /publisher/dashboard HTTP/1.1" 200
+[16/10/2025 14:22:45][uvicorn.access][INFO] -> 172.31.93.66:37202 - "GET /publisher/upload HTTP/1.1" 200
+[16/10/2025 14:22:55][bot.server][INFO] -> File uploaded by publisher sayem75105@scanue.com: tmppjhfymsz_1000875780.mp4, hash_id: ff485fdd3fcd2f0f48c5aabf
+[16/10/2025 14:22:55][uvicorn.access][INFO] -> 172.31.93.66:37202 - "POST /publisher/upload-video HTTP/1.1" 200
+[16/10/2025 14:40:26][bot][INFO] -> initializing...
+[16/10/2025 14:40:27][bot][INFO] -> Telegram client is now started.
+[16/10/2025 14:40:27][bot][INFO] -> Loading bot plugins...
+[16/10/2025 14:40:27][bot][INFO] -> Loaded 5 plugins.
+[16/10/2025 14:40:27][bot][INFO] -> Bot is now ready!
+[16/10/2025 14:40:34][bot.database][INFO] -> Database initialized successfully
+[16/10/2025 14:40:36][bot.database][INFO] -> Database migrations completed successfully
+[16/10/2025 14:40:38][bot.database][INFO] -> Admin account password updated: admin@bot.com
+[16/10/2025 14:40:38][uvicorn][INFO] -> Web server is started!
+[16/10/2025 14:40:38][uvicorn][INFO] -> Server running on 0.0.0.0:5000
+[16/10/2025 14:42:17][uvicorn.access][INFO] -> 172.31.80.130:42690 - "GET / HTTP/1.1" 200
+[16/10/2025 14:46:10][uvicorn.access][INFO] -> 172.31.80.130:49048 - "GET / HTTP/1.1" 200
+[16/10/2025 14:49:44][uvicorn.access][INFO] -> 172.31.80.130:40574 - "GET / HTTP/1.1" 200
+[16/10/2025 14:57:45][bot][INFO] -> initializing...
+[16/10/2025 14:57:46][bot][INFO] -> Telegram client is now started.
+[16/10/2025 14:57:46][bot][INFO] -> Loading bot plugins...
+[16/10/2025 14:57:46][bot][INFO] -> Loaded 5 plugins.
+[16/10/2025 14:57:46][bot][INFO] -> Bot is now ready!
+[16/10/2025 14:57:54][bot.database][INFO] -> Database initialized successfully
+[16/10/2025 14:57:56][bot.database][INFO] -> Database migrations completed successfully
+[16/10/2025 14:57:59][bot.database][INFO] -> Admin account password updated: admin@bot.com
+[16/10/2025 14:57:59][uvicorn][INFO] -> Web server is started!
+[16/10/2025 14:57:59][uvicorn][INFO] -> Server running on 0.0.0.0:5000
+[16/10/2025 14:58:00][uvicorn.access][INFO] -> 172.31.82.34:43570 - "GET / HTTP/1.1" 200
+[16/10/2025 15:02:25][uvicorn.access][INFO] -> 172.31.82.34:41410 - "GET / HTTP/1.1" 200
+[16/10/2025 15:04:52][uvicorn.access][INFO] -> 172.31.82.34:35382 - "GET / HTTP/1.1" 200
+[16/10/2025 15:06:02][uvicorn.access][INFO] -> 172.31.82.34:35382 - "GET / HTTP/1.1" 200
+[17/10/2025 02:56:02][bot][INFO] -> initializing...
+[17/10/2025 02:56:03][bot][INFO] -> Telegram client is now started.
+[17/10/2025 02:56:03][bot][INFO] -> Loading bot plugins...
+[17/10/2025 02:56:03][bot][INFO] -> Loaded 5 plugins.
+[17/10/2025 02:56:03][bot][INFO] -> Bot is now ready!
+[17/10/2025 02:56:29][bot.database][INFO] -> Database initialized successfully
+[17/10/2025 02:56:33][bot][INFO] -> initializing...
+[17/10/2025 02:56:33][bot][INFO] -> Telegram client is now started.
+[17/10/2025 02:56:33][bot][INFO] -> Loading bot plugins...
+[17/10/2025 02:56:33][bot][INFO] -> Loaded 5 plugins.
+[17/10/2025 02:56:33][bot][INFO] -> Bot is now ready!
+[17/10/2025 02:56:41][bot.database][INFO] -> Database initialized successfully
+[17/10/2025 02:56:47][bot.database][INFO] -> Database migrations completed successfully
+[17/10/2025 02:56:50][bot.database][INFO] -> Default admin account created: admin@bot.com
+[17/10/2025 02:56:50][uvicorn][INFO] -> Web server is started!
+[17/10/2025 02:56:50][uvicorn][INFO] -> Server running on 0.0.0.0:5000
+[17/10/2025 02:56:51][uvicorn.access][INFO] -> 172.31.105.130:51922 - "GET / HTTP/1.1" 200
+[17/10/2025 02:56:52][uvicorn.access][INFO] -> 127.0.0.1:55682 - "GET / HTTP/1.1" 200
+[17/10/2025 02:56:59][uvicorn.access][INFO] -> 127.0.0.1:41288 - "GET /favicon.ico HTTP/1.1" 404
+[17/10/2025 02:57:15][uvicorn.access][INFO] -> 172.31.105.130:51922 - "GET / HTTP/1.1" 200
+[17/10/2025 02:58:13][uvicorn.access][INFO] -> 172.31.105.130:51922 - "GET /login HTTP/1.1" 200
+[17/10/2025 02:58:53][uvicorn.access][INFO] -> 172.31.105.130:51922 - "GET /login HTTP/1.1" 200
+[17/10/2025 02:58:55][uvicorn.access][INFO] -> 172.31.105.130:51922 - "GET /favicon.ico HTTP/1.1" 404
+[17/10/2025 02:58:57][uvicorn.access][INFO] -> 172.31.105.130:51922 - "GET /register HTTP/1.1" 200
+[17/10/2025 02:59:12][uvicorn.access][INFO] -> 172.31.105.130:51922 - "POST /register HTTP/1.1" 302
+[17/10/2025 02:59:19][uvicorn.access][INFO] -> 172.31.105.130:51922 - "GET /publisher/dashboard HTTP/1.1" 200
+[17/10/2025 02:59:54][uvicorn.access][INFO] -> 172.31.105.130:51922 - "GET /publisher/withdraw HTTP/1.1" 200
+[17/10/2025 03:00:36][bot.server][INFO] -> Bank account saved for publisher sayem75105@scanue.com
+[17/10/2025 03:00:36][uvicorn.access][INFO] -> 172.31.105.130:51922 - "POST /publisher/save-bank-account HTTP/1.1" 302
+[17/10/2025 03:00:40][uvicorn.access][INFO] -> 172.31.105.130:51922 - "GET /publisher/withdraw?message=Bank%20account%20saved%20successfully HTTP/1.1" 200
+[17/10/2025 03:01:09][uvicorn.access][INFO] -> 172.31.105.130:51922 - "GET /logout HTTP/1.1" 302
+[17/10/2025 03:01:09][uvicorn.access][INFO] -> 172.31.105.130:51922 - "GET /login HTTP/1.1" 200
+[17/10/2025 03:01:20][uvicorn.access][INFO] -> 172.31.105.130:51922 - "POST /login HTTP/1.1" 302
+[17/10/2025 03:01:23][uvicorn.access][INFO] -> 172.31.105.130:51922 - "GET /admin/dashboard HTTP/1.1" 200
+[17/10/2025 03:01:38][uvicorn.access][INFO] -> 172.31.105.130:51922 - "GET /admin/publishers HTTP/1.1" 200
+[17/10/2025 03:28:01][bot][INFO] -> initializing...
+[17/10/2025 03:28:02][bot][INFO] -> Telegram client is now started.
+[17/10/2025 03:28:02][bot][INFO] -> Loading bot plugins...
+[17/10/2025 03:28:02][bot][INFO] -> Loaded 5 plugins.
+[17/10/2025 03:28:02][bot][INFO] -> Bot is now ready!
+[17/10/2025 03:28:11][bot.database][INFO] -> Database initialized successfully
+[17/10/2025 03:28:16][bot.database][INFO] -> Database migrations completed successfully
+[17/10/2025 03:28:19][bot.database][INFO] -> Admin account password updated: admin@bot.com
+[17/10/2025 03:28:19][uvicorn][INFO] -> Web server is started!
+[17/10/2025 03:28:19][uvicorn][INFO] -> Server running on 0.0.0.0:5000
+[17/10/2025 03:28:20][uvicorn.access][INFO] -> 172.31.116.226:38650 - "GET / HTTP/1.1" 200
+[17/10/2025 03:29:45][uvicorn.access][INFO] -> 172.31.116.226:38650 - "GET / HTTP/1.1" 200
+[17/10/2025 03:30:54][uvicorn.access][INFO] -> 172.31.116.226:38650 - "GET / HTTP/1.1" 200
+[17/10/2025 03:31:23][uvicorn.access][INFO] -> 172.31.116.226:38650 - "GET / HTTP/1.1" 200
+[17/10/2025 03:32:36][uvicorn.access][INFO] -> 172.31.116.226:38650 - "GET / HTTP/1.1" 200
+[17/10/2025 03:34:17][uvicorn.access][INFO] -> 172.31.116.226:46136 - "GET / HTTP/1.1" 200
+[17/10/2025 03:35:14][bot.database][INFO] -> Database connection closed
+[17/10/2025 03:35:14][uvicorn][INFO] -> Web server is shutting down!
+[17/10/2025 03:35:16][bot][INFO] -> initializing...
+[17/10/2025 03:35:17][bot][INFO] -> Telegram client is now started.
+[17/10/2025 03:35:17][bot][INFO] -> Loading bot plugins...
+[17/10/2025 03:35:17][bot][INFO] -> Loaded 5 plugins.
+[17/10/2025 03:35:17][bot][INFO] -> Bot is now ready!
+[17/10/2025 03:35:25][bot.database][INFO] -> Database initialized successfully
+[17/10/2025 03:35:43][bot.database][INFO] -> Database migrations completed successfully
+[17/10/2025 03:35:46][bot][INFO] -> initializing...
+[17/10/2025 03:35:47][bot][INFO] -> Telegram client is now started.
+[17/10/2025 03:35:47][bot][INFO] -> Loading bot plugins...
+[17/10/2025 03:35:47][bot][INFO] -> Loaded 5 plugins.
+[17/10/2025 03:35:47][bot][INFO] -> Bot is now ready!
+[17/10/2025 03:35:55][bot.database][INFO] -> Database initialized successfully
+[17/10/2025 03:36:01][bot.database][INFO] -> Database migrations completed successfully
+[17/10/2025 03:36:04][bot.database][INFO] -> Admin account password updated: admin@bot.com
+[17/10/2025 03:36:04][uvicorn][INFO] -> Web server is started!
+[17/10/2025 03:36:04][uvicorn][INFO] -> Server running on 0.0.0.0:5000
+[17/10/2025 03:36:06][uvicorn.access][INFO] -> 127.0.0.1:36144 - "GET / HTTP/1.1" 200
+[17/10/2025 03:36:14][uvicorn.access][INFO] -> 127.0.0.1:54522 - "GET /favicon.ico HTTP/1.1" 404
+[17/10/2025 03:36:28][uvicorn.access][INFO] -> 172.31.116.226:46860 - "GET / HTTP/1.1" 200
+[17/10/2025 03:37:45][uvicorn.access][INFO] -> 172.31.116.226:46860 - "GET / HTTP/1.1" 200
+[17/10/2025 03:37:52][uvicorn.access][INFO] -> 172.31.116.226:46860 - "GET / HTTP/1.1" 200
+[17/10/2025 03:39:29][bot.database][INFO] -> Database connection closed
+[17/10/2025 03:39:29][uvicorn][INFO] -> Web server is shutting down!
+[17/10/2025 03:39:31][bot][INFO] -> initializing...
+[17/10/2025 03:39:32][bot][INFO] -> Telegram client is now started.
+[17/10/2025 03:39:32][bot][INFO] -> Loading bot plugins...
+[17/10/2025 03:39:32][bot][INFO] -> Loaded 5 plugins.
+[17/10/2025 03:39:32][bot][INFO] -> Bot is now ready!
+[17/10/2025 03:39:36][bot][INFO] -> initializing...
+[17/10/2025 03:39:40][bot.database][INFO] -> Database initialized successfully
+[17/10/2025 03:39:45][bot.database][INFO] -> Database migrations completed successfully
+[17/10/2025 03:39:48][bot.database][INFO] -> Admin account password updated: admin@bot.com
+[17/10/2025 03:39:48][uvicorn][INFO] -> Web server is started!
+[17/10/2025 03:39:48][uvicorn][INFO] -> Server running on 0.0.0.0:5000
+[17/10/2025 03:39:50][uvicorn.access][INFO] -> 172.31.116.226:55748 - "GET / HTTP/1.1" 200
+[17/10/2025 03:40:14][bot.database][INFO] -> Database connection closed
+[17/10/2025 03:40:14][uvicorn][INFO] -> Web server is shutting down!
+[17/10/2025 03:40:15][bot][INFO] -> initializing...
+[17/10/2025 03:40:16][bot][INFO] -> Telegram client is now started.
+[17/10/2025 03:40:16][bot][INFO] -> Loading bot plugins...
+[17/10/2025 03:40:16][bot][INFO] -> Loaded 5 plugins.
+[17/10/2025 03:40:16][bot][INFO] -> Bot is now ready!
+[17/10/2025 03:40:24][bot.database][INFO] -> Database initialized successfully
+[17/10/2025 03:40:29][bot.database][INFO] -> Database migrations completed successfully
+[17/10/2025 03:40:32][bot.database][INFO] -> Admin account password updated: admin@bot.com
+[17/10/2025 03:40:32][uvicorn][INFO] -> Web server is started!
+[17/10/2025 03:40:32][uvicorn][INFO] -> Server running on 0.0.0.0:5000
+[17/10/2025 03:40:33][uvicorn.access][INFO] -> 172.31.116.226:48092 - "GET / HTTP/1.1" 200
+[17/10/2025 03:41:52][uvicorn.access][INFO] -> 172.31.116.226:48092 - "GET / HTTP/1.1" 200
+[17/10/2025 03:42:17][uvicorn.access][INFO] -> 172.31.116.226:48092 - "GET /admin/publishers HTTP/1.1" 302
+[17/10/2025 03:42:17][uvicorn.access][INFO] -> 172.31.116.226:48092 - "GET /login HTTP/1.1" 200
+[17/10/2025 03:42:29][uvicorn.access][INFO] -> 172.31.116.226:48092 - "POST /login HTTP/1.1" 302
+[17/10/2025 03:42:32][uvicorn.access][INFO] -> 172.31.116.226:48092 - "GET /admin/dashboard HTTP/1.1" 200
+[17/10/2025 03:42:43][uvicorn.access][INFO] -> 172.31.116.226:48092 - "GET /admin/withdrawals HTTP/1.1" 200
+[17/10/2025 04:12:03][bot][INFO] -> initializing...
+[17/10/2025 04:12:04][bot][INFO] -> Telegram client is now started.
+[17/10/2025 04:12:04][bot][INFO] -> Loading bot plugins...
+[17/10/2025 04:12:04][bot][INFO] -> Loaded 5 plugins.
+[17/10/2025 04:12:04][bot][INFO] -> Bot is now ready!
+[17/10/2025 04:12:13][bot.database][INFO] -> Database initialized successfully
+[17/10/2025 04:12:18][bot.database][INFO] -> Database migrations completed successfully
+[17/10/2025 04:12:21][bot.database][INFO] -> Admin account password updated: admin@bot.com
+[17/10/2025 04:12:21][uvicorn][INFO] -> Web server is started!
+[17/10/2025 04:12:21][uvicorn][INFO] -> Server running on 0.0.0.0:5000
+[17/10/2025 04:12:23][uvicorn.access][INFO] -> 172.31.119.66:41404 - "GET / HTTP/1.1" 200
+[17/10/2025 05:29:54][bot][INFO] -> initializing...
+[17/10/2025 05:29:55][bot][INFO] -> Telegram client is now started.
+[17/10/2025 05:29:55][bot][INFO] -> Loading bot plugins...
+[17/10/2025 05:29:55][bot][INFO] -> Loaded 5 plugins.
+[17/10/2025 05:29:55][bot][INFO] -> Bot is now ready!
+[17/10/2025 05:30:09][bot.database][INFO] -> Database initialized successfully
+[17/10/2025 05:30:12][bot.database][INFO] -> Database migrations completed successfully
+[17/10/2025 05:30:13][bot.database][INFO] -> Default admin account created: admin@bot.com
+[17/10/2025 05:30:13][uvicorn][INFO] -> Web server is started!
+[17/10/2025 05:30:13][uvicorn][INFO] -> Server running on 0.0.0.0:5000
+[17/10/2025 05:30:15][uvicorn.access][INFO] -> 127.0.0.1:38662 - "GET / HTTP/1.1" 200
+[17/10/2025 05:30:22][uvicorn.access][INFO] -> 127.0.0.1:38166 - "GET /favicon.ico HTTP/1.1" 404
+[17/10/2025 05:30:39][uvicorn.access][INFO] -> 172.31.83.226:44530 - "GET / HTTP/1.1" 200
+[17/10/2025 05:30:54][uvicorn.access][INFO] -> 172.31.83.226:44530 - "GET /login HTTP/1.1" 200
+[17/10/2025 05:31:45][uvicorn.access][INFO] -> 172.31.83.226:44530 - "GET /login HTTP/1.1" 200
+[17/10/2025 05:33:34][uvicorn.access][INFO] -> 172.31.83.226:43422 - "GET / HTTP/1.1" 200
+[17/10/2025 05:34:54][uvicorn.access][INFO] -> 172.31.83.226:43422 - "GET /favicon.ico HTTP/1.1" 404
+[17/10/2025 05:35:45][uvicorn.access][INFO] -> 172.31.83.226:43422 - "GET /register HTTP/1.1" 200
+[17/10/2025 05:36:40][uvicorn.access][INFO] -> 172.31.83.226:43422 - "GET /register HTTP/1.1" 200
+[17/10/2025 05:36:43][uvicorn.access][INFO] -> 172.31.83.226:43422 - "GET /register HTTP/1.1" 200
+[17/10/2025 05:37:02][uvicorn.access][INFO] -> 172.31.83.226:43422 - "POST /register HTTP/1.1" 302
+[17/10/2025 05:37:05][uvicorn.access][INFO] -> 172.31.83.226:43422 - "GET /publisher/dashboard HTTP/1.1" 200
+[17/10/2025 05:37:23][uvicorn.access][INFO] -> 172.31.83.226:43422 - "GET /publisher/upload HTTP/1.1" 200
+[17/10/2025 05:37:27][uvicorn.access][INFO] -> 172.31.83.226:43422 - "GET /publisher/videos HTTP/1.1" 200
+[17/10/2025 05:37:32][uvicorn.access][INFO] -> 172.31.83.226:43422 - "GET /publisher/api-management HTTP/1.1" 200
+[17/10/2025 05:37:37][uvicorn.access][INFO] -> 172.31.83.226:43422 - "GET /publisher/withdraw HTTP/1.1" 200
+[17/10/2025 05:39:58][uvicorn.access][INFO] -> 172.31.83.226:57400 - "GET / HTTP/1.1" 200
+[17/10/2025 05:41:20][uvicorn.access][INFO] -> 172.31.83.226:57400 - "GET / HTTP/1.1" 200
+[17/10/2025 05:42:24][uvicorn.access][INFO] -> 172.31.83.226:57400 - "GET / HTTP/1.1" 200
+[17/10/2025 05:43:46][uvicorn.access][INFO] -> 172.31.83.226:57400 - "GET / HTTP/1.1" 200
+[17/10/2025 05:44:52][uvicorn.access][INFO] -> 172.31.83.226:57400 - "GET / HTTP/1.1" 200
+[17/10/2025 05:47:13][uvicorn.access][INFO] -> 172.31.83.226:51274 - "GET / HTTP/1.1" 200
+[17/10/2025 05:49:50][bot.database][INFO] -> Database connection closed
+[17/10/2025 05:49:50][uvicorn][INFO] -> Web server is shutting down!
+[17/10/2025 05:49:52][bot][INFO] -> initializing...
+[17/10/2025 05:49:53][bot][INFO] -> Telegram client is now started.
+[17/10/2025 05:49:53][bot][INFO] -> Loading bot plugins...
+[17/10/2025 05:49:53][bot][INFO] -> Loaded 5 plugins.
+[17/10/2025 05:49:53][bot][INFO] -> Bot is now ready!
+[17/10/2025 05:49:57][bot.database][INFO] -> Database initialized successfully
+[17/10/2025 05:50:01][bot.database][INFO] -> Database migrations completed successfully
+[17/10/2025 05:50:02][bot.database][INFO] -> Admin account password updated: admin@bot.com
+[17/10/2025 05:50:02][uvicorn][INFO] -> Web server is started!
+[17/10/2025 05:50:02][uvicorn][INFO] -> Server running on 0.0.0.0:5000
+[17/10/2025 05:50:03][uvicorn.access][INFO] -> 172.31.83.226:56812 - "GET / HTTP/1.1" 200
+[17/10/2025 05:50:04][uvicorn.access][INFO] -> 127.0.0.1:41742 - "GET / HTTP/1.1" 200
+[17/10/2025 05:50:11][uvicorn.access][INFO] -> 127.0.0.1:41742 - "GET /favicon.ico HTTP/1.1" 404
+[17/10/2025 05:50:32][uvicorn.access][INFO] -> 172.31.83.226:56812 - "GET /logout HTTP/1.1" 302
+[17/10/2025 05:50:33][uvicorn.access][INFO] -> 172.31.83.226:56812 - "GET /login HTTP/1.1" 200
+[17/10/2025 05:50:45][uvicorn.access][INFO] -> 172.31.83.226:56812 - "POST /login HTTP/1.1" 302
+[17/10/2025 05:50:47][uvicorn.access][INFO] -> 172.31.83.226:56812 - "GET /admin/dashboard HTTP/1.1" 200
+[17/10/2025 05:50:58][uvicorn.access][INFO] -> 172.31.83.226:56812 - "GET /admin/publishers HTTP/1.1" 200
+[17/10/2025 05:51:03][uvicorn.access][INFO] -> 172.31.83.226:56812 - "GET /admin/withdrawals HTTP/1.1" 200
+[17/10/2025 05:51:06][uvicorn.access][INFO] -> 172.31.83.226:56812 - "GET /admin/ad-networks HTTP/1.1" 200
+[17/10/2025 05:51:15][uvicorn.access][INFO] -> 172.31.83.226:56812 - "GET /admin/settings HTTP/1.1" 200
+[17/10/2025 05:52:08][bot.database][INFO] -> Database connection closed
+[17/10/2025 05:52:08][uvicorn][INFO] -> Web server is shutting down!
+[17/10/2025 05:52:09][bot][INFO] -> initializing...
+[17/10/2025 05:52:10][bot][INFO] -> Telegram client is now started.
+[17/10/2025 05:52:10][bot][INFO] -> Loading bot plugins...
+[17/10/2025 05:52:10][bot][INFO] -> Loaded 5 plugins.
+[17/10/2025 05:52:10][bot][INFO] -> Bot is now ready!
+[17/10/2025 05:52:14][bot.database][INFO] -> Database initialized successfully
+[17/10/2025 05:52:17][bot.database][INFO] -> Database migrations completed successfully
+[17/10/2025 05:52:19][bot.database][INFO] -> Admin account password updated: admin@bot.com
+[17/10/2025 05:52:19][uvicorn][INFO] -> Web server is started!
+[17/10/2025 05:52:19][uvicorn][INFO] -> Server running on 0.0.0.0:5000
+[17/10/2025 06:02:51][uvicorn.access][INFO] -> 172.31.83.226:52782 - "GET / HTTP/1.1" 200
+[17/10/2025 06:05:01][uvicorn.access][INFO] -> 172.31.83.226:48482 - "GET / HTTP/1.1" 200
+[17/10/2025 06:07:03][uvicorn.access][INFO] -> 172.31.83.226:54730 - "GET / HTTP/1.1" 200
+[17/10/2025 08:21:14][bot][INFO] -> initializing...
+[17/10/2025 08:21:14][bot][INFO] -> Telegram client is now started.
+[17/10/2025 08:21:14][bot][INFO] -> Loading bot plugins...
+[17/10/2025 08:21:14][bot][INFO] -> Loaded 5 plugins.
+[17/10/2025 08:21:14][bot][INFO] -> Bot is now ready!
+[17/10/2025 08:21:41][bot.database][INFO] -> Database initialized successfully
+[17/10/2025 08:21:48][bot.database][INFO] -> Database migrations completed successfully
+[17/10/2025 08:21:51][bot.database][INFO] -> Default admin account created: admin@bot.com
+[17/10/2025 08:21:51][uvicorn][INFO] -> Web server is started!
+[17/10/2025 08:21:51][uvicorn][INFO] -> Server running on 0.0.0.0:5000
+[17/10/2025 08:21:52][uvicorn.access][INFO] -> 127.0.0.1:34600 - "GET / HTTP/1.1" 200
+[17/10/2025 08:22:00][uvicorn.access][INFO] -> 127.0.0.1:39590 - "GET /favicon.ico HTTP/1.1" 404
+[17/10/2025 08:22:37][uvicorn.access][INFO] -> 172.31.65.98:55520 - "GET / HTTP/1.1" 200
+[17/10/2025 08:22:54][uvicorn.access][INFO] -> 172.31.65.98:55520 - "GET /login HTTP/1.1" 200
+[17/10/2025 08:22:58][uvicorn.access][INFO] -> 172.31.65.98:55520 - "GET /favicon.ico HTTP/1.1" 404
+[17/10/2025 08:23:07][uvicorn.access][INFO] -> 172.31.65.98:55520 - "POST /login HTTP/1.1" 302
+[17/10/2025 08:23:09][uvicorn.access][INFO] -> 172.31.65.98:55520 - "GET /admin/dashboard HTTP/1.1" 200
+[17/10/2025 08:23:15][uvicorn.access][INFO] -> 172.31.65.98:55520 - "GET /admin/settings HTTP/1.1" 200
+[17/10/2025 08:23:19][uvicorn.access][INFO] -> 172.31.65.98:55520 - "GET /admin/ad-networks HTTP/1.1" 200
+[17/10/2025 08:23:27][uvicorn.access][INFO] -> 172.31.65.98:55520 - "GET /admin/settings HTTP/1.1" 200
+[17/10/2025 08:23:54][uvicorn.access][INFO] -> 172.31.65.98:55520 - "POST /admin/settings/update HTTP/1.1" 302
+[17/10/2025 08:23:55][uvicorn.access][INFO] -> 172.31.65.98:55520 - "GET /admin/settings HTTP/1.1" 200
+[17/10/2025 08:24:01][uvicorn.access][INFO] -> 172.31.65.98:55520 - "GET /admin/ad-networks HTTP/1.1" 200
+[17/10/2025 08:24:30][uvicorn.access][INFO] -> 172.31.65.98:55520 - "GET /api/banner_ads?token=hii HTTP/1.1" 404
+[17/10/2025 08:24:30][uvicorn.access][INFO] -> 172.31.65.98:55520 - "GET /favicon.ico HTTP/1.1" 404
+[17/10/2025 08:24:58][uvicorn.access][INFO] -> 172.31.65.98:55520 - "POST /admin/ad-networks/add HTTP/1.1" 302
+[17/10/2025 08:24:59][uvicorn.access][INFO] -> 172.31.65.98:55520 - "GET /admin/ad-networks HTTP/1.1" 200
+[17/10/2025 08:25:06][uvicorn.access][INFO] -> 172.31.65.98:55520 - "GET /api/banner_ads?token=hii HTTP/1.1" 200
+[17/10/2025 08:25:24][uvicorn.access][INFO] -> 172.31.65.98:55520 - "GET /api/banner_ads?token=hij HTTP/1.1" 401
+[17/10/2025 08:25:41][uvicorn.access][INFO] -> 172.31.65.98:55520 - "GET /admin/ad-networks HTTP/1.1" 200
+[17/10/2025 08:25:51][uvicorn.access][INFO] -> 172.31.65.98:55520 - "GET /admin/settings HTTP/1.1" 200
+[17/10/2025 08:26:04][uvicorn.access][INFO] -> 172.31.65.98:55520 - "GET / HTTP/1.1" 200
